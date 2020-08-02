@@ -12,3 +12,4 @@ In future these code comments can be compiled together to form blogs 😅
 
 ## List of topics:
 1. [Why and how to use `__str__` and `__repr__` methods?](https://github.com/ayushmahajan/my-python-learning/blob/master/OOP%20in%20Python/OOP_String_Conversion.py) 
+2. [super() and why is it used?](https://github.com/ayushmahajan/my-python-learning/blob/master/OOP%20in%20Python/Super_in_Python.py)
