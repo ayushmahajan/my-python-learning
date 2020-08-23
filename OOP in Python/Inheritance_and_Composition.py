@@ -7,14 +7,14 @@ class PayrollSystem:
 
 
 class Employee:
-    def __int__(self, emp_id, name):
+    def __init__(self, emp_id, name):
         self.id = emp_id
         self.name = name
 
 
 class SalaryEmployee(Employee):
-    def __int__(self, emp_id, name, weekly_salary):
-        super().__int__(emp_id, name)
+    def __init__(self, emp_id, name, weekly_salary):
+        super().__init__(emp_id, name)
         self.weekly_salary = weekly_salary
 
     def calculate_payroll(self):
@@ -22,8 +22,8 @@ class SalaryEmployee(Employee):
 
 
 class HourlyEmployee(Employee):
-    def __int__(self, emp_id, name, hours_worked, hourly_rate):
-        super().__int__(emp_id, name)
+    def __init__(self, emp_id, name, hours_worked, hourly_rate):
+        super().__init__(emp_id, name)
         self.hours_worked = hours_worked
         self.hourly_rate = hourly_rate
 
@@ -32,11 +32,21 @@ class HourlyEmployee(Employee):
 
 
 class CommissionEmployee(SalaryEmployee):
-    def __int__(self, emp_id, name, weekly_salary, commission):
-        super().__int__(emp_id, name, weekly_salary)
+    def __init__(self, emp_id, name, weekly_salary, commission):
+        super().__init__(emp_id, name, weekly_salary)
         self.commission = commission
 
     def calculate_payroll(self):
         fixed_salary = super().calculate_payroll()
         return fixed_salary + self.commission
 
+
+if __name__ == "__main__":
+    salaryEmp = SalaryEmployee(122, "Ayush", 1200)
+    hourlyEmp = HourlyEmployee(231, "Sam", 40, 15)
+    commissionEmp = CommissionEmployee(324, "John", 1000, 150)
+
+    emp_list = [salaryEmp, hourlyEmp, commissionEmp]
+
+    payroll_system = PayrollSystem()
+    payroll_system.calculate_payroll(emp_list)
