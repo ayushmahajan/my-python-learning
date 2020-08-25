@@ -15,3 +15,4 @@ In future these code comments can be compiled together to form blogs 😅
 2. [`super()` and why is it used?](https://github.com/ayushmahajan/my-python-learning/blob/master/OOP-in-Python/Super_in_Python.py)
 3. [Inheritance and Composition in play](https://github.com/ayushmahajan/my-python-learning/blob/master/OOP-in-Python/Inheritance_and_Composition.py)
 4. [Multiple Inheritance and Method Resolution Order in Python](https://github.com/ayushmahajan/my-python-learning/blob/master/OOP-in-Python/Multiple_Inheritance_and_Super.py)
+5. [Abstract Class Example](https://github.com/ayushmahajan/my-python-learning/tree/master/OOP-in-Python/AbstractClass)
